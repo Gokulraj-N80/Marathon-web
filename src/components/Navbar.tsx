@@ -46,15 +46,13 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-500 ${
-        scrolled
-          ? "bg-white/90 backdrop-blur-xl border-b border-border shadow-soft"
-          : "bg-white/60 backdrop-blur-md border-b border-border/50"
+      className={`sticky top-0 z-50 w-full bg-white transition-shadow duration-300 ${
+        scrolled ? "shadow-sm" : "border-b border-slate-100"
       }`}
     >
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between gap-4">
+      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 md:h-[68px] flex items-center justify-between">
         <Logo />
-        <ul className="hidden lg:flex items-center gap-1">
+        <ul className="hidden lg:flex items-center gap-0.5">
           {NAV.map((n) => (
             <li key={n.to}>
               <Link
@@ -65,45 +63,45 @@ export default function Navbar() {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }
                 }}
-                className="px-4 py-2 text-sm font-medium text-slate hover:text-navy hover:bg-royal/5 rounded-xl transition-all duration-200"
-                activeProps={{ className: "!text-royal font-semibold !bg-royal/5" }}
+                className="relative px-3 py-2 text-[13px] font-normal tracking-wide text-slate-500 hover:text-navy transition-colors duration-200 after:absolute after:bottom-0 after:left-3 after:right-3 after:h-px after:bg-navy after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100"
+                activeProps={{ className: "!text-navy !font-medium after:!scale-x-100" }}
               >
                 {n.label}
               </Link>
             </li>
           ))}
         </ul>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <Link
             to="/register"
-            className="hidden sm:inline-flex items-center gap-2 rounded-2xl bg-orange hover:bg-[#EA580C] text-white px-5 py-2.5 text-sm font-semibold shadow-soft hover:shadow-glow hover:scale-105 transition-all duration-300"
+            className="hidden sm:inline-flex items-center rounded-lg bg-navy text-white px-4 py-2 text-[13px] font-medium tracking-wide hover:bg-navy/90 transition-colors duration-200"
           >
             Register Now
           </Link>
           <button
             aria-label="Toggle menu"
-            className="lg:hidden inline-flex items-center justify-center h-10 w-10 rounded-xl hover:bg-navy/5 text-charcoal transition-all duration-200"
+            className="lg:hidden inline-flex items-center justify-center h-9 w-9 rounded-lg hover:bg-slate-50 text-slate-500 transition-colors duration-200"
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {open ? <X className="h-[18px] w-[18px]" /> : <Menu className="h-[18px] w-[18px]" />}
           </button>
         </div>
       </nav>
 
       {/* Mobile overlay */}
       <div
-        className={`lg:hidden fixed inset-x-0 top-16 bottom-0 z-40 transition-all duration-300 ${
+        className={`lg:hidden fixed inset-x-0 top-16 bottom-0 z-40 transition-all duration-200 ${
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="absolute inset-0 bg-navy/20 backdrop-blur-sm" onClick={() => setOpen(false)} />
+        <div className="absolute inset-0 bg-black/10" onClick={() => setOpen(false)} />
         <div
-          className={`relative bg-white/95 backdrop-blur-xl border-b border-border shadow-elevated transition-all duration-300 ${
-            open ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
+          className={`relative bg-white border-b border-slate-100 shadow-sm transition-all duration-200 ${
+            open ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0"
           }`}
         >
-          <ul className="px-6 py-4 space-y-1">
-            {NAV.map((n, i) => (
+          <ul className="px-4 py-3">
+            {NAV.map((n) => (
               <li key={n.to}>
                 <Link
                   to={n.to}
@@ -114,18 +112,17 @@ export default function Navbar() {
                       window.scrollTo({ top: 0, behavior: "smooth" });
                     }
                   }}
-                  className="block px-4 py-3 rounded-2xl text-base font-medium text-slate hover:text-navy hover:bg-royal/5 transition-all duration-200"
-                  style={{ animationDelay: `${i * 50}ms` }}
+                  className="block px-3 py-2.5 text-sm font-normal text-slate-500 hover:text-navy hover:bg-slate-50 rounded-lg transition-colors duration-150"
                 >
                   {n.label}
                 </Link>
               </li>
             ))}
-            <li className="pt-2">
+            <li className="pt-2 px-3">
               <Link
                 to="/register"
                 onClick={() => setOpen(false)}
-                className="block text-center rounded-2xl bg-orange hover:bg-[#EA580C] text-white px-5 py-3.5 text-sm font-semibold shadow-soft"
+                className="block text-center rounded-lg bg-navy text-white py-2.5 text-sm font-medium"
               >
                 Register Now
               </Link>
