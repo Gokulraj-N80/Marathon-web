@@ -1,0 +1,363 @@
+import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
+import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
+import { D as HeartPulse, E as Heart, N as Droplet, O as HeartHandshake, U as ArrowRight, W as Activity, f as ShieldCheck, i as Users, k as Footprints, l as Sparkles, m as Route, o as Trophy, r as Wind, s as Timer } from "../_libs/lucide-react.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/RegistrationCTA-DbMGZLLo.js
+var import_jsx_runtime = require_jsx_runtime();
+var about_runners_default = "/assets/about-runners-C1KMfJYf.jpg";
+function AboutEvent() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		className: "py-20 md:py-28 bg-navy relative overflow-hidden",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "absolute inset-0 pointer-events-none",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-0 right-0 w-96 h-96 rounded-full bg-royal/10 blur-3xl" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute bottom-0 left-0 w-72 h-72 rounded-full bg-orange/5 blur-3xl" })]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid gap-10 md:gap-16 md:grid-cols-2 items-center",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "relative",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+					src: about_runners_default,
+					alt: "Runners celebrating at the finish line",
+					loading: "lazy",
+					width: 1200,
+					height: 1200,
+					className: "rounded-3xl shadow-elevated w-full h-auto object-cover aspect-square"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "absolute -bottom-6 -right-6 hidden md:block rounded-2xl bg-navy/95 backdrop-blur-md shadow-elevated p-5 max-w-[240px] ring-1 ring-white/15 border-l-4 border-l-orange",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-4",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "grid place-items-center h-12 w-12 rounded-xl bg-orange/15 text-orange shrink-0 animate-pulse-glow",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Heart, {
+								className: "h-6 w-6",
+								fill: "currentColor"
+							})
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "font-display text-3xl font-black text-white leading-none",
+							children: "10K+"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-xs text-slate-400 mt-1 font-semibold uppercase tracking-wider",
+							children: "Expected Runners"
+						})] })]
+					})
+				})]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "text-orange font-semibold text-sm tracking-widest uppercase",
+					children: "About The Event"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+					className: "mt-3 font-display text-3xl md:text-5xl font-extrabold text-white leading-tight",
+					children: ["Tie Your Laces, Get Ready and ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-orange-gradient",
+						children: "Push Your Limits"
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "mt-4 h-1.5 w-16 rounded-full bg-orange" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "prose prose-lg text-white/80 prose-p:leading-relaxed",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "mt-6",
+						children: "We are excited to announce the 6th Edition of Run Beyond Limits, happening on 27th September 2026 simultaneously across Chennai, Bengaluru, and Salem. With the theme “Push Your Endurance”, this year’s event continues our mission to raise awareness about fitness, resilience, and personal records, uniting thousands of passionate runners for one powerful cause."
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "mt-4 text-white/70 leading-relaxed",
+					children: "By participating, you’re not just running a race — you’re embracing a lifestyle and joining a community that believes in taking proactive steps toward a stronger, healthier future."
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("blockquote", {
+					className: "mt-8 border-l-4 border-orange bg-white/5 backdrop-blur-sm rounded-r-2xl pl-6 py-4.5 pr-4 italic text-white/95 font-semibold text-lg max-w-xl",
+					children: "“Every step matters. Every heartbeat counts.”"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "mt-10",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+						to: "/about",
+						className: "inline-flex items-center gap-2 rounded-full bg-white text-navy px-8 py-4 font-bold shadow-elevated hover:shadow-glow hover:scale-105 transition-all duration-300",
+						children: ["Know More About The Event ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-5 w-5" })]
+					})
+				})
+			] })]
+		})]
+	});
+}
+var items$1 = [
+	{
+		icon: HeartPulse,
+		title: "Run for Your Health",
+		desc: "Improve cardiovascular health while training for a purposeful cause.",
+		num: "01"
+	},
+	{
+		icon: Users,
+		title: "Build a Stronger Community",
+		desc: "Connect with thousands of runners who share your passion.",
+		num: "02"
+	},
+	{
+		icon: Trophy,
+		title: "Celebrate Your Achievement",
+		desc: "Earn your finisher medal and a moment you'll remember for life.",
+		num: "03"
+	},
+	{
+		icon: Footprints,
+		title: "Make Every Step Count",
+		desc: "Support heart health awareness with each stride you take.",
+		num: "04"
+	}
+];
+function WhyParticipate() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+		className: "py-20 md:py-24 bg-[#F8FAFC] dots-pattern",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "mx-auto max-w-7xl px-4 sm:px-6 lg:px-8",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "text-center max-w-2xl mx-auto mb-14",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "text-royal font-semibold text-sm tracking-widest uppercase",
+						children: "Why Participate"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "mt-3 text-3xl md:text-4xl font-extrabold text-charcoal",
+						children: "Reasons to Run With Us"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "mt-4 h-1 w-16 mx-auto rounded-full gradient-cta" })
+				]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "grid gap-6 sm:grid-cols-2 lg:grid-cols-4",
+				children: items$1.map(({ icon: Icon, title, desc, num }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "group bg-white rounded-2xl p-6 shadow-sm border border-slate-100/80 hover:border-royal/30 hover:shadow-elevated hover-lift relative overflow-hidden transition-all duration-300",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "absolute top-4 right-4 text-4xl font-black text-navy/5 group-hover:text-navy/10 transition duration-300",
+							children: num
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "grid place-items-center h-12 w-12 rounded-xl bg-gradient-to-br from-royal to-navy text-white group-hover:scale-105 transition-all duration-300 shadow-soft",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { className: "h-6 w-6" })
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "mt-5 font-extrabold text-lg text-slate-800 tracking-tight",
+							children: title
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "mt-2 text-xs md:text-sm text-slate-500 leading-relaxed",
+							children: desc
+						})
+					]
+				}, title))
+			})]
+		})
+	});
+}
+var items = [
+	{
+		icon: ShieldCheck,
+		title: "Professionally Organized",
+		desc: "A team of race experts delivering a world-class event."
+	},
+	{
+		icon: Route,
+		title: "Safe & Supportive Route",
+		desc: "Hydration, medical and support stations every kilometre."
+	},
+	{
+		icon: Timer,
+		title: "Certified Timing",
+		desc: "Accurate results powered by professional chip timing."
+	},
+	{
+		icon: Sparkles,
+		title: "Exclusive Finisher Experience",
+		desc: "A celebration that honours every runner who crosses the line."
+	},
+	{
+		icon: HeartHandshake,
+		title: "Heart-Focused Mission",
+		desc: "Every registration supports heart health awareness in India."
+	}
+];
+function MarathonDifference() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		className: "py-20 md:py-28 gradient-hero text-white relative overflow-hidden",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "absolute inset-0 pointer-events-none",
+				style: {
+					backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.18) 1.2px, transparent 1.2px)",
+					backgroundSize: "20px 20px"
+				}
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "absolute inset-0 pointer-events-none",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-0 right-0 w-96 h-96 rounded-full bg-white/5 blur-3xl" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute bottom-0 left-0 w-72 h-72 rounded-full bg-orange/10 blur-3xl" })]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "text-center max-w-2xl mx-auto mb-14",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-orange font-semibold text-sm tracking-widest uppercase",
+							children: "The Difference"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "mt-3 font-display text-3xl md:text-5xl font-extrabold",
+							children: "What Makes Run Beyond Limits Different?"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "mt-4 h-1 w-16 mx-auto rounded-full bg-white/40" })
+					]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "grid gap-6 sm:grid-cols-2 lg:grid-cols-3",
+					children: items.map(({ icon: Icon, title, desc }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "rounded-2xl bg-white/10 backdrop-blur-md ring-1 ring-white/15 p-7 hover-lift shadow-soft group hover:bg-white/15 transition",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "grid place-items-center h-12 w-12 rounded-xl bg-white/15 text-white group-hover:scale-110 transition-transform",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { className: "h-6 w-6" })
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+								className: "mt-4 font-bold text-lg",
+								children: title
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-2 text-sm text-white/70 leading-relaxed",
+								children: desc
+							})
+						]
+					}, title))
+				})]
+			})
+		]
+	});
+}
+var tips = [
+	{
+		icon: Heart,
+		title: "Know Your Baseline",
+		desc: "Get a fitness assessment before starting any training program."
+	},
+	{
+		icon: Droplet,
+		title: "Hydration Matters",
+		desc: "Drink water regularly, especially the day before your race."
+	},
+	{
+		icon: Activity,
+		title: "Warm-up Well",
+		desc: "Dynamic warm-ups reduce injury and prepare your heart."
+	},
+	{
+		icon: Wind,
+		title: "Recover Fully",
+		desc: "Cool down, stretch and rest to help your body rebuild."
+	}
+];
+function HeartHealthSection() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		className: "py-20 md:py-24 bg-[#F8FAFC] relative overflow-hidden dots-pattern",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -top-20 -right-20 w-80 h-80 rounded-full bg-royal/10 blur-3xl" }),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-orange/10 blur-3xl" }),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "text-royal font-semibold text-sm tracking-widest uppercase",
+						children: "Heart Health"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+						className: "mt-4 font-display text-3xl md:text-5xl font-extrabold text-charcoal leading-tight",
+						children: ["Run for Your ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-royal",
+							children: "Limits"
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "mt-4 text-muted-foreground leading-relaxed",
+						children: "Run Beyond Limits is more than a race — it’s a movement for pushing personal boundaries. Every stride is a reminder that regular activity, mindful nutrition and small daily habits add up to a lifetime of incredible endurance and strength."
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+						href: "#faq",
+						className: "mt-6 inline-flex items-center gap-2 rounded-full gradient-cta text-white px-6 py-3 font-semibold shadow-soft hover:scale-105 transition",
+						children: ["Learn More About Endurance ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4" })]
+					})
+				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "grid gap-4 sm:grid-cols-2",
+					children: tips.map(({ icon: Icon, title, desc }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "rounded-2xl bg-white p-6 shadow-soft border border-slate-100 hover:border-royal/30 hover:shadow-elevated hover-lift transition-all duration-300 group",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "grid place-items-center h-12 w-12 rounded-xl bg-royal/5 text-royal group-hover:bg-gradient-to-br group-hover:from-royal group-hover:to-navy group-hover:text-white transition-all duration-300 shadow-sm",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { className: "h-5 w-5" })
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+								className: "mt-4 font-extrabold text-charcoal text-base md:text-lg",
+								children: title
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-1.5 text-xs md:text-sm text-slate-500 leading-relaxed",
+								children: desc
+							})
+						]
+					}, title))
+				})]
+			})
+		]
+	});
+}
+function RegistrationCTA() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		className: "py-24 md:py-32 relative overflow-hidden gradient-hero text-white",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "absolute inset-0 pointer-events-none",
+				style: {
+					backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.18) 1.2px, transparent 1.2px)",
+					backgroundSize: "20px 20px"
+				}
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "absolute inset-0 pointer-events-none",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Heart, { className: "absolute top-8 left-8 h-24 w-24 text-white/10" }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Heart, { className: "absolute bottom-8 right-8 h-40 w-40 text-white/10" }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-orange/10 blur-3xl" })
+				]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "text-orange font-semibold text-sm tracking-widest uppercase",
+						children: "Join The Movement"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "mt-4 font-display text-4xl md:text-6xl font-extrabold leading-tight",
+						children: "Ready to Protect Your Heart?"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "mt-4 h-1 w-16 mx-auto rounded-full bg-orange/40" }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "mt-6 text-white/85 text-lg max-w-2xl mx-auto leading-relaxed",
+						children: "Join thousands of runners and take your first step toward a healthier, stronger future."
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "mt-10 flex flex-wrap justify-center gap-4",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+							to: "/register",
+							className: "inline-flex items-center gap-2 rounded-full bg-white text-navy px-8 py-4 font-bold shadow-elevated hover:scale-105 transition text-base",
+							children: ["Register Now ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-5 w-5" })]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+							to: "/contact",
+							className: "inline-flex items-center gap-2 rounded-full ring-1 ring-white/40 text-white px-8 py-4 font-semibold hover:bg-white/10 transition text-base",
+							children: "Contact Us"
+						})]
+					})
+				]
+			})
+		]
+	});
+}
+//#endregion
+export { WhyParticipate as a, RegistrationCTA as i, HeartHealthSection as n, MarathonDifference as r, AboutEvent as t };
