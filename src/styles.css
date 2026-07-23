@@ -242,3 +242,26 @@
 @utility animate-loader-dot {
   animation: loader-dot 1.4s ease-in-out infinite;
 }
+
+@keyframes letter-in {
+  0% { opacity: 0; transform: translateY(40px) scale(0.6); filter: blur(10px); }
+  70% { opacity: 1; filter: blur(0); }
+  100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+@keyframes letter-glow {
+  0%, 100% { text-shadow: 0 0 0 transparent; }
+  50% { text-shadow: 0 0 24px rgba(37, 99, 235, 0.7), 0 0 48px rgba(37, 99, 235, 0.3); }
+}
+@keyframes underline-grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+@utility animate-letter-in {
+  animation: letter-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@utility animate-letter-glow {
+  animation: letter-glow 2s ease-in-out infinite;
+}
+@utility animate-underline-grow {
+  animation: underline-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
