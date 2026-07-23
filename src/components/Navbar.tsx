@@ -46,13 +46,15 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full bg-white transition-shadow duration-300 ${
-        scrolled ? "shadow-sm" : "border-b border-slate-100"
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? "bg-white/80 backdrop-blur-lg shadow-soft border-b border-white/20"
+          : "bg-white border-b border-slate-100"
       }`}
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 md:h-[68px] flex items-center justify-between">
         <Logo />
-        <ul className="hidden lg:flex items-center gap-0.5">
+        <ul className="hidden lg:flex items-center gap-1">
           {NAV.map((n) => (
             <li key={n.to}>
               <Link
@@ -63,46 +65,54 @@ export default function Navbar() {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }
                 }}
-                className="relative px-3 py-2 text-[13px] font-normal tracking-wide text-slate-500 hover:text-navy transition-colors duration-200 after:absolute after:bottom-0 after:left-3 after:right-3 after:h-px after:bg-navy after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100"
-                activeProps={{ className: "!text-navy !font-medium after:!scale-x-100" }}
+                className="relative px-4 py-2 text-sm font-medium tracking-wide text-slate-500 hover:text-royal rounded-full hover:bg-royal/5 transition-all duration-200 after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-royal after:rounded-full after:transition-all after:duration-300 hover:after:w-6"
+                activeProps={{ className: "!text-royal !font-semibold !bg-royal/5 after:!w-6" }}
               >
                 {n.label}
               </Link>
             </li>
           ))}
         </ul>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <Link
             to="/register"
-            className="hidden sm:inline-flex items-center rounded-lg bg-navy text-white px-4 py-2 text-[13px] font-medium tracking-wide hover:bg-navy/90 transition-colors duration-200"
+            className="hidden sm:inline-flex items-center rounded-full gradient-cta text-white px-6 py-2.5 text-sm font-semibold tracking-wide shadow-soft hover:shadow-glow hover:scale-105 transition-all duration-300"
           >
             Register Now
           </Link>
           <button
             aria-label="Toggle menu"
-            className="lg:hidden inline-flex items-center justify-center h-9 w-9 rounded-lg hover:bg-slate-50 text-slate-500 transition-colors duration-200"
+            className={`lg:hidden inline-flex items-center justify-center h-10 w-10 rounded-full transition-all duration-200 ${
+              open ? "bg-royal/10 text-royal" : "hover:bg-slate-100 text-slate-500"
+            }`}
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? <X className="h-[18px] w-[18px]" /> : <Menu className="h-[18px] w-[18px]" />}
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </nav>
 
       {/* Mobile overlay */}
       <div
-        className={`lg:hidden fixed inset-x-0 top-16 bottom-0 z-40 transition-all duration-200 ${
+        className={`lg:hidden fixed inset-x-0 top-16 bottom-0 z-40 transition-all duration-300 ${
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="absolute inset-0 bg-black/10" onClick={() => setOpen(false)} />
+        <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" onClick={() => setOpen(false)} />
         <div
-          className={`relative bg-white border-b border-slate-100 shadow-sm transition-all duration-200 ${
-            open ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0"
+          className={`relative bg-white/95 backdrop-blur-lg border-b border-slate-100 shadow-elevated transition-all duration-300 ${
+            open ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
           }`}
         >
-          <ul className="px-4 py-3">
-            {NAV.map((n) => (
-              <li key={n.to}>
+          <ul className="px-4 py-4 space-y-1">
+            {NAV.map((n, i) => (
+              <li
+                key={n.to}
+                className={`transition-all duration-300 ${
+                  open ? "translate-x-0 opacity-100" : "-translate-x-4 opacity-0"
+                }`}
+                style={{ transitionDelay: open ? `${i * 50}ms` : "0ms" }}
+              >
                 <Link
                   to={n.to}
                   onClick={(e) => {
@@ -112,17 +122,22 @@ export default function Navbar() {
                       window.scrollTo({ top: 0, behavior: "smooth" });
                     }
                   }}
-                  className="block px-3 py-2.5 text-sm font-normal text-slate-500 hover:text-navy hover:bg-slate-50 rounded-lg transition-colors duration-150"
+                  className="block px-4 py-3 text-base font-medium text-slate-500 hover:text-royal hover:bg-royal/5 rounded-xl transition-all duration-150"
                 >
                   {n.label}
                 </Link>
               </li>
             ))}
-            <li className="pt-2 px-3">
+            <li
+              className={`pt-2 transition-all duration-300 ${
+                open ? "translate-x-0 opacity-100" : "-translate-x-4 opacity-0"
+              }`}
+              style={{ transitionDelay: open ? `${NAV.length * 50}ms` : "0ms" }}
+            >
               <Link
                 to="/register"
                 onClick={() => setOpen(false)}
-                className="block text-center rounded-lg bg-navy text-white py-2.5 text-sm font-medium"
+                className="block text-center rounded-full gradient-cta text-white py-3 text-base font-semibold shadow-soft"
               >
                 Register Now
               </Link>
