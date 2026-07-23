@@ -86,7 +86,7 @@ function RegisterPage() {
             Your spot for the <span className="font-semibold text-charcoal">{race.distance} KM {race.type}</span> is
             reserved. A confirmation with payment link has been sent to your email.
           </p>
-          <Link to="/" className="mt-6 inline-flex rounded-full gradient-cta text-white px-6 py-3 font-semibold">
+          <Link to="/" className="mt-6 inline-flex rounded-full gradient-orange text-white px-6 py-3 font-semibold">
             Back to Home
           </Link>
         </div>
@@ -98,7 +98,7 @@ function RegisterPage() {
     <div className="gradient-page min-h-screen">
       <section className="page-header-banner text-white py-10 md:py-14">
         <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-orange font-semibold text-sm tracking-widest uppercase">Registration</p>
+          <p className="text-white/70 font-semibold text-sm tracking-widest uppercase">Registration</p>
           <h1 className="mt-2 font-display text-3xl md:text-5xl font-extrabold">Join Run Beyond Limits 2026</h1>
           <p className="mt-3 text-base md:text-lg text-white/80 max-w-xl mx-auto">
             Complete your registration in a few simple steps and secure your spot.
@@ -113,11 +113,11 @@ function RegisterPage() {
           {STEPS.map((label, i) => (
             <div key={label} className="text-center">
               <div className={`mx-auto h-9 w-9 rounded-full grid place-items-center text-xs font-bold ${
-                i < step ? "bg-royal text-white" : i === step ? "gradient-cta text-white shadow-glow" : "bg-white text-muted-foreground border border-border"
+                i < step ? "bg-navy text-white" : i === step ? "gradient-orange text-white shadow-glow" : "bg-white text-muted-foreground border border-border"
               }`}>
                 {i < step ? <Check className="h-4 w-4" /> : i + 1}
               </div>
-              <p className={`mt-2 text-[10px] md:text-xs font-semibold uppercase tracking-widest ${i === step ? "text-royal" : "text-muted-foreground"}`}>{label}</p>
+              <p className={`mt-2 text-[10px] md:text-xs font-semibold uppercase tracking-widest ${i === step ? "text-navy" : "text-muted-foreground"}`}>{label}</p>
             </div>
           ))}
         </div>
@@ -133,7 +133,7 @@ function RegisterPage() {
                     key={c.id}
                     onClick={() => setCityId(c.id)}
                     className={`text-left rounded-2xl p-5 border-2 transition ${
-                      cityId === c.id ? "border-royal bg-royal/5 shadow-soft" : "border-border hover:border-royal/50"
+                      cityId === c.id ? "border-navy bg-navy/5 shadow-soft" : "border-border hover:border-navy/30"
                     }`}
                   >
                     <div className="font-display text-2xl font-black text-charcoal">{c.name}</div>
@@ -154,13 +154,13 @@ function RegisterPage() {
                     key={r.id}
                     onClick={() => setRaceId(r.id)}
                     className={`text-left rounded-2xl p-5 border-2 transition ${
-                      raceId === r.id ? "border-royal bg-royal/5 shadow-soft" : "border-border hover:border-royal/50"
+                      raceId === r.id ? "border-navy bg-navy/5 shadow-soft" : "border-border hover:border-navy/30"
                     }`}
                   >
                     <div className="font-display text-4xl font-black text-charcoal">{r.distance}<span className="text-lg"> KM</span></div>
                     <p className="mt-1 font-semibold">{r.type}</p>
                     <p className="text-xs text-muted-foreground">{r.subtype} · Min age {r.minAge}</p>
-                    <p className="mt-3 text-royal font-bold">₹{r.fee}</p>
+                    <p className="mt-3 text-orange font-bold">₹{r.fee}</p>
                   </button>
                 ))}
               </div>
@@ -205,7 +205,7 @@ function RegisterPage() {
                     key={s}
                     onClick={() => setSize(s)}
                     className={`h-14 rounded-xl font-bold text-lg border-2 transition ${
-                      size === s ? "border-royal bg-royal text-white" : "border-border hover:border-royal/50"
+                      size === s ? "border-navy bg-navy text-white" : "border-border hover:border-navy/30"
                     }`}
                   >
                     {s}
@@ -225,7 +225,7 @@ function RegisterPage() {
                 <Row label="Email · Phone" value={`${details.email} · ${details.phone}`} />
                 <Row label="Address" value={`${address.address}, ${address.city}, ${address.state} - ${address.pincode}`} />
                 <Row label="T-Shirt Size" value={size} />
-                <div className="rounded-2xl gradient-cta text-white p-5 flex items-center justify-between mt-6">
+                <div className="rounded-2xl gradient-orange text-white p-5 flex items-center justify-between mt-6">
                   <div>
                     <p className="text-xs uppercase tracking-widest text-white/80">Total</p>
                     <p className="font-display text-3xl font-black">₹{race.fee}</p>
@@ -245,7 +245,7 @@ function RegisterPage() {
               <ChevronLeft className="h-4 w-4" /> Back
             </button>
             {step < STEPS.length - 1 ? (
-              <button onClick={next} className="inline-flex items-center gap-2 rounded-full gradient-cta text-white px-6 py-3 font-semibold shadow-soft hover:scale-105 transition">
+              <button onClick={next} className="inline-flex items-center gap-2 rounded-full gradient-orange text-white px-6 py-3 font-semibold shadow-soft hover:scale-105 transition">
                 Continue <ChevronRight className="h-4 w-4" />
               </button>
             ) : (
@@ -271,7 +271,7 @@ function Input({ label, value, onChange, type = "text", error }: {
         type={type}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className={`mt-1.5 w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-royal ${error ? "border-destructive" : "border-border"}`}
+        className={`mt-1.5 w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-navy ${error ? "border-destructive" : "border-border"}`}
       />
       {error && <p className="mt-1 text-xs text-destructive">{error}</p>}
     </div>
@@ -287,7 +287,7 @@ function Select({ label, value, onChange, options, error }: {
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className={`mt-1.5 w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-royal ${error ? "border-destructive" : "border-border"}`}
+        className={`mt-1.5 w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-navy ${error ? "border-destructive" : "border-border"}`}
       >
         <option value="">Select...</option>
         {options.map((o) => <option key={o} value={o}>{o}</option>)}

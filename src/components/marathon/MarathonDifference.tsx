@@ -10,26 +10,26 @@ const items = [
 
 export default function MarathonDifference() {
   return (
-    <section className="py-20 md:py-28 gradient-hero text-white relative overflow-hidden">
+    <section className="py-24 md:py-32 gradient-hero text-white relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.18) 1.2px, transparent 1.2px)", backgroundSize: "20px 20px" }} />
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/5 blur-3xl" />
         <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-orange/10 blur-3xl" />
       </div>
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="text-orange font-semibold text-sm tracking-widest uppercase">The Difference</p>
-          <h2 className="mt-3 font-display text-3xl md:text-5xl font-extrabold">What Makes Run Beyond Limits Different?</h2>
-          <div className="mt-4 h-1 w-16 mx-auto rounded-full bg-white/40" />
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <p className="text-white/70 font-semibold text-sm tracking-widest uppercase">The Difference</p>
+          <h2 className="mt-3 font-display text-3xl md:text-5xl lg:text-6xl font-extrabold">What Makes Run Beyond Limits Different?</h2>
+          <div className="mt-4 h-1.5 w-20 mx-auto rounded-full bg-white/40" />
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="rounded-2xl bg-white/10 backdrop-blur-md ring-1 ring-white/15 p-7 hover-lift shadow-soft group hover:bg-white/15 transition">
-              <div className="grid place-items-center h-12 w-12 rounded-xl bg-white/15 text-white group-hover:scale-110 transition-transform">
-                <Icon className="h-6 w-6" />
+            <div key={title} className="rounded-[1.5rem] bg-white/10 backdrop-blur-xl ring-1 ring-white/15 p-8 hover-lift shadow-soft group hover:bg-white/15 hover:ring-white/25 transition-all duration-300">
+              <div className="grid place-items-center h-14 w-14 rounded-2xl bg-white/15 text-white group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300">
+                <Icon className="h-7 w-7" />
               </div>
-              <h3 className="mt-4 font-bold text-lg">{title}</h3>
-              <p className="mt-2 text-sm text-white/70 leading-relaxed">{desc}</p>
+              <h3 className="mt-5 font-bold text-lg">{title}</h3>
+              <p className="mt-2.5 text-sm text-white/70 leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>
