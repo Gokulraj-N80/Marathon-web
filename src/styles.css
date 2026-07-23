@@ -57,10 +57,13 @@
   --gradient-orange: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
   --gradient-footer: linear-gradient(180deg, #0F172A 0%, #020617 100%);
   --gradient-page: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
+  --gradient-soft: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 50%, #F8FAFC 100%);
 
   --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
   --shadow-elevated: 0 20px 50px rgba(37, 99, 235, 0.18);
   --shadow-glow: 0 0 40px rgba(37, 99, 235, 0.3);
+  --shadow-card: 0 4px 20px rgba(15, 23, 42, 0.06);
+  --shadow-card-hover: 0 12px 40px rgba(37, 99, 235, 0.15);
 }
 
 @layer base {
@@ -96,6 +99,9 @@
 }
 @utility gradient-page {
   background-image: var(--gradient-page);
+}
+@utility gradient-soft {
+  background-image: var(--gradient-soft);
 }
 @utility page-header-banner {
   background-image: var(--gradient-hero);
@@ -143,6 +149,12 @@
 @utility shadow-glow {
   box-shadow: var(--shadow-glow);
 }
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}
+@utility shadow-card-hover {
+  box-shadow: var(--shadow-card-hover);
+}
 @utility dots-pattern {
   background-image: radial-gradient(circle, rgba(37, 99, 235, 0.15) 1px, transparent 1px);
   background-size: 24px 24px;
@@ -152,6 +164,25 @@
   &:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-elevated);
+  }
+}
+@utility gradient-border {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, var(--royal), var(--orange));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:hover::before {
+    opacity: 1;
   }
 }
 
@@ -171,6 +202,10 @@
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(8px); }
 }
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
 
 @utility animate-fade-up {
   animation: fade-up 0.7s ease-out both;
@@ -183,4 +218,8 @@
 }
 @utility animate-scroll-bounce {
   animation: scroll-bounce 2s ease-in-out infinite;
+}
+@utility animate-shimmer {
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
 }
