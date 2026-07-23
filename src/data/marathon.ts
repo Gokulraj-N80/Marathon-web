@@ -1,6 +1,5 @@
 export const EVENT = {
   name: "Run Beyond Limits 2026",
-  edition: "6th Edition",
   tagline: "Run Beyond Limits",
   subtag: "Push Your Endurance",
   date: "Sunday, September 27, 2026",

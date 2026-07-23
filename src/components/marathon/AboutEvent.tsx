@@ -35,10 +35,6 @@ export default function AboutEvent() {
             <MapPin className="h-4 w-4 text-orange" />
             <span className="text-xs font-semibold text-white">3 Cities</span>
           </div>
-          <div className="absolute top-1/2 -right-6 hidden md:flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md ring-1 ring-white/20 px-4 py-2 animate-float" style={{ animationDelay: "1s" }}>
-            <Users className="h-4 w-4 text-royal" />
-            <span className="text-xs font-semibold text-white">6th Edition</span>
-          </div>
         </div>
         <div>
           <p className="text-white/70 font-semibold text-sm tracking-widest uppercase">About The Event</p>
@@ -48,7 +44,7 @@ export default function AboutEvent() {
           <div className="mt-4 h-1.5 w-20 rounded-full bg-orange" />
           <div className="prose prose-lg text-white/80 prose-p:leading-relaxed">
             <p className="mt-6 text-lg">
-              We are excited to announce the 6th Edition of Run Beyond Limits, happening on 27th September 2026 simultaneously across Chennai, Bengaluru, and Salem. With the theme "Push Your Endurance", this year's event continues our mission to raise awareness about fitness, resilience, and personal records, uniting thousands of passionate runners for one powerful cause.
+              We are excited to announce Run Beyond Limits, happening on 27th September 2026 simultaneously across Chennai, Bengaluru, and Salem. With the theme "Push Your Endurance", this year's event continues our mission to raise awareness about fitness, resilience, and personal records, uniting thousands of passionate runners for one powerful cause.
             </p>
           </div>
           <p className="mt-4 text-white/70 leading-relaxed text-lg">

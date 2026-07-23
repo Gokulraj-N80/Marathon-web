@@ -53,7 +53,7 @@ export default function PressHighlights() {
                   </div>
                   <h3 className="font-bold text-charcoal text-lg leading-snug group-hover:text-navy transition-colors duration-200">{s.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
-                    Read how runners of all ages made this edition unforgettable through resilience and heart.
+                    Read how runners of all ages made this event unforgettable through resilience and heart.
                   </p>
                   <div className="mt-3 flex items-center gap-1.5 text-xs text-slate-400">
                     <Calendar className="h-3 w-3" />

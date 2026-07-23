@@ -7,7 +7,7 @@ export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
       { title: "Gallery · Run Beyond Limits 2026" },
-      { name: "description", content: "Moments from previous editions of Run Beyond Limits." },
+      { name: "description", content: "Moments from previous Run Beyond Limits events." },
     ],
   }),
   component: GalleryPage,
