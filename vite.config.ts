@@ -4,4 +4,7 @@ export default defineConfig({
   tsr: {
     appDirectory: "src",
   },
+  nitro: {
+    preset: "vercel",
+  },
 });
