@@ -27,6 +27,8 @@ export function Logo({ compact = false, inFooter = false }: { compact?: boolean;
       <img
         src={logo}
         alt="Run Beyond Limits"
+        width={280}
+        height={80}
         className={`w-auto object-contain transition-transform duration-300 group-hover:scale-105 ${inFooter ? "h-10 max-w-[140px]" : compact ? "h-7" : "h-9 md:h-10"}`}
       />
     </Link>
@@ -52,7 +54,7 @@ export default function Navbar() {
           : "bg-white border-b border-slate-100"
       }`}
     >
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 md:h-[68px] flex items-center justify-between">
+      <nav aria-label="Main navigation" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 md:h-[68px] flex items-center justify-between">
         <Logo />
         <ul className="hidden lg:flex items-center gap-1">
           {NAV.map((n) => (

@@ -21,6 +21,7 @@ function GalleryPage() {
           src={bgImg}
           alt="Marathon gallery background"
           className="absolute inset-0 h-full w-full object-cover object-center"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-navy/80 via-navy/60 to-navy/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-navy/20" />

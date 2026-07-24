@@ -264,10 +264,12 @@ function RegisterPage() {
 function Input({ label, value, onChange, type = "text", error }: {
   label: string; value: string; onChange: (v: string) => void; type?: string; error?: string;
 }) {
+  const id = label.toLowerCase().replace(/\s+/g, "-");
   return (
     <div>
-      <label className="text-sm font-semibold text-charcoal">{label}</label>
+      <label htmlFor={id} className="text-sm font-semibold text-charcoal">{label}</label>
       <input
+        id={id}
         type={type}
         value={value}
         onChange={(e) => onChange(e.target.value)}
@@ -281,10 +283,12 @@ function Input({ label, value, onChange, type = "text", error }: {
 function Select({ label, value, onChange, options, error }: {
   label: string; value: string; onChange: (v: string) => void; options: string[]; error?: string;
 }) {
+  const id = label.toLowerCase().replace(/\s+/g, "-");
   return (
     <div>
-      <label className="text-sm font-semibold text-charcoal">{label}</label>
+      <label htmlFor={id} className="text-sm font-semibold text-charcoal">{label}</label>
       <select
+        id={id}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         className={`mt-1.5 w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-navy ${error ? "border-destructive" : "border-border"}`}

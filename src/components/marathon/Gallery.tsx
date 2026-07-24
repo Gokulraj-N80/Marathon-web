@@ -62,6 +62,8 @@ export default function Gallery({ compact = false }: { compact?: boolean }) {
                 <img
                   src={img.src}
                   alt={img.alt}
+                  width={800}
+                  height={i % 3 === 0 ? 1000 : 800}
                   loading="lazy"
                   className={`w-full object-cover transition-transform duration-700 group-hover:scale-110 ${i % 3 === 0 ? "aspect-[4/5]" : "aspect-square"}`}
                 />
@@ -124,6 +126,8 @@ export default function Gallery({ compact = false }: { compact?: boolean }) {
             <img
               src={images[open].src}
               alt={images[open].alt}
+              width={1200}
+              height={800}
               className="max-h-[75vh] max-w-full rounded-2xl shadow-elevated mx-auto"
             />
             <div className="mt-4 text-white">

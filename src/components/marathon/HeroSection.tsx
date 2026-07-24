@@ -10,6 +10,8 @@ export default function HeroSection() {
       <img
         src={bgImg}
         alt="Runners during the Run Beyond Limits marathon"
+        width={1920}
+        height={1080}
         className="absolute inset-0 h-full w-full object-cover object-center"
       />
       <div className="absolute inset-0 bg-navy/40" />
@@ -32,6 +34,8 @@ export default function HeroSection() {
             <img
               src={logo}
               alt="Run Beyond Limits"
+              width={400}
+              height={160}
               className="h-20 md:h-28 w-auto object-contain drop-shadow-lg"
             />
             <div className="flex flex-wrap items-center gap-3">

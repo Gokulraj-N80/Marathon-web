@@ -85,8 +85,9 @@ export default function ContactSection() {
           <Field label="Email" name="email" type="email" value={form.email} onChange={onChange} error={errors.email} />
           <Field label="Phone" name="phone" type="tel" value={form.phone} onChange={onChange} error={errors.phone} />
           <div>
-            <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Message</label>
+            <label htmlFor="message" className="text-xs font-bold text-slate-500 uppercase tracking-wider">Message</label>
             <textarea
+              id="message"
               name="message"
               rows={4}
               value={form.message}
@@ -114,8 +115,9 @@ function Field({ label, name, type = "text", value, onChange, error }: {
 }) {
   return (
     <div>
-      <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">{label}</label>
+      <label htmlFor={name} className="text-xs font-bold text-slate-500 uppercase tracking-wider">{label}</label>
       <input
+        id={name}
         type={type}
         name={name}
         value={value}

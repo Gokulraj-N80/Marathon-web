@@ -21,7 +21,7 @@ export default function PressHighlights() {
         </div>
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="relative overflow-hidden rounded-[2rem] shadow-elevated group cursor-pointer">
-            <img src={g3} alt="Aerial heart formation" loading="lazy" className="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 group-hover:scale-105" />
+            <img src={g3} alt="Aerial heart formation" width={800} height={600} loading="lazy" className="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent" />
             <div className="absolute top-6 left-6 flex items-center gap-3">
               <span className="inline-block rounded-full gradient-orange text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5">Featured</span>
@@ -44,7 +44,7 @@ export default function PressHighlights() {
           <div className="grid gap-6">
             {stories.map((s) => (
               <article key={s.title} className="group grid grid-cols-[140px_1fr] sm:grid-cols-[180px_1fr] gap-4 rounded-[1.5rem] overflow-hidden bg-white border border-border shadow-card hover:shadow-card-hover hover-lift transition-all duration-300 cursor-pointer">
-                <img src={s.img} alt={s.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src={s.img} alt={s.title} width={360} height={240} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="p-4 sm:p-5">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-xs font-semibold text-orange uppercase tracking-widest">{s.tag}</span>
